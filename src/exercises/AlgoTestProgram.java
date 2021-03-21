@@ -1,5 +1,6 @@
 package exercises;
 
+import modules.IModule;
 import modules.RModule;
 
 public class AlgoTestProgram {
@@ -7,10 +8,11 @@ public class AlgoTestProgram {
     public static void main(String[] args) {
         int[] list = {2, 9, 5, 4, 8, 1, 6};
         print(list);
-        RModule.selectionSort(list);
+        IModule.quickSort(list);
+        System.out.println("Quick sort method:");
         print(list);
 
-        System.out.println("Location of 8 : " + RModule.binarySearch(list, 8));
+//        System.out.println("Location of 2 : " + RModule.binarySearch(list, 2));
 
     }
 

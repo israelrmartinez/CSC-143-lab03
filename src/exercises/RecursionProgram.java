@@ -4,27 +4,49 @@ public class RecursionProgram {
 
     public static int fac(int n) {
         //TODO: COMPLETE BODY
-        return 0;
+        if (n == 0) {
+            return 1;
+        }
+        return n * fac(n - 1);
     }
 
     public static int fib(int n) {
         //TODO : COMPLETE BODY
-        return 0;
+        if (n <= 1) {
+            return n;
+        }
+        return fib(n - 1) + fib(n - 2);
     }
 
     public static boolean isPalindrome(String s) {
         //TODO : COMPLETE BODY
-        return false;
+        if (s.length() <= 1) {
+            return true;
+        } else if (s.charAt(0) != s.charAt(s.length() - 1)) {
+            return false;
+        }
+        return isPalindrome(s.substring(1, s.length() - 1));
     }
 
     public static double pow(double x, int n) {
         //TODO: COMPLETE BODY
-        return 0;
+        if (n == 0) {
+            return 1;
+        } else if (n == 1) {
+            return x;
+        } else if (n % 2 == 0) {
+            return pow(x * x, n / 2);
+        } else {
+            return x * pow(x, n - 1);
+        }
     }
 
     public static int sum(int n) {
         //TODO : COMPLETE BODY
-        return 0;
+        if (n <= 1) {
+            return n;
+        }
+        return n + sum(n - 1);
     }
 
     public static void testPalindrome(){
@@ -93,6 +115,7 @@ public class RecursionProgram {
     }
 
     public static void main(String[] args) {
-
+        testPalindrome();
+        testRecursiveMath();
     }
 }
