@@ -6,13 +6,15 @@ import modules.RModule;
 public class AlgoTestProgram {
 
     public static void main(String[] args) {
-        int[] list = {2, 9, 5, 4, 8, 1, 6};
+        int[] list = {2, 3, 1, 5, 8, 6};
         print(list);
-        IModule.quickSort(list);
-        System.out.println("Quick sort method:");
+        IModule.linearSearch(list, 3);
+        System.out.println("Linear search method:");
         print(list);
 
-//        System.out.println("Location of 2 : " + RModule.binarySearch(list, 2));
+        System.out.println("Location of 3 : " + IModule.linearSearch(list, 3));
+        System.out.println("Location of 7 : " + IModule.linearSearch(list, 7));
+        System.out.println("Location of 8 : " + IModule.linearSearch(list, 8));
 
     }
 
